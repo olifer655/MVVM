@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MVVM</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="message.a">
+        <div></div> 
+        <ul><li></li></ul>
+        {{message.a}}
+    </div>
+    <script src="watcher.js"></script>
+    <script src="observer.js"></script>
+    <script src="compile.js"></script>
+    <script src="mvvm.js"></script>
+    <script>
+        // Object.defineProperty get 和 set 
+        // vue 中实现双向绑定 1.编译模版  2.数据劫持 观察数据变化  3.观察者 Watcher: 用来关联模版和数据
+        let vm  = new MVVM({
+            el: '#app', // document.getElementById('app')
+            data: {
+                message: {
+                    a: 'hello'
+                },
+                a: 'hello. a'
+            }
+        })
+    </script>
+</body>
+</html>
