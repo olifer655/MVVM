@@ -1,4 +1,4 @@
-# MVVM
+
 1. [vue2 检测变化](https://github.com/olifer655/randomNotes/issues/59#render)
 
 2. [vue 源码分析 － watch](https://github.com/olifer655/MVVM/issues/1)
